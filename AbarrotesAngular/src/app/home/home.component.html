@@ -1,0 +1,32 @@
+
+  <div class="alert alert-info" role="alert">
+    <div class="card">
+      <h5 class="card-header">Productos
+          <a class="float-right" style="display: inline-block;" routerLink="/create" title="Nuevo">Nuevo</a>
+      </h5>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Presentación</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Unidad de medida</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Operación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <th>{{producto.producto}}</th>
+        <td>{{producto.presentacion}}</td>
+        <td>{{producto.cantidad}}</td>
+        <td>{{producto.unidadMedida}}</td>
+        <td>{{producto.precio}}</td>
+        <td><button type="button" class="btn btn-primary btn-sm" routerLink="/edit/{{producto.id}}">Ver/Editar</button>
+        &nbsp; <button type="button" class="btn btn-danger btn-sm" (click)="delete(producto.id)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
