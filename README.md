@@ -1,6 +1,6 @@
 # ProyectoPrueba
 
-## Instrucciones proyecto AbarrotesLaravel
+## Instrucciones AbarrotesLaravel
 
 **Este proyecto utiliza.**
 - Laravel 5.8
@@ -31,7 +31,7 @@
 8. Por último corre el servidor de laravel para pruebas en el puerto 8000 que laravel por default toma ese puerto
 	> **php artisan serve**
 
-## Instrucciones proyecto AbarrotesAngular
+## Instrucciones AbarrotesAngular
 
 1. instalar Node.js si aun no lo tienes instalado
 
