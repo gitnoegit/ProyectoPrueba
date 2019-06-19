@@ -23,25 +23,25 @@
 6. Configura los valores del archivo .env toma una copia del archivo .env.example para configurarlo.
 
 6. Para crear las tablas ejecuta el comando de laravel
-	> php artisan migrate 
+	> **php artisan migrate** 
 	
 7. Es necesario crear unos registros en ciertas tablas para que el proyecto funcione asi que ejecuta el comando 
-	> php artisan db:seed
+	> **php artisan db:seed**
 
 8. Por último corre el servidor de laravel para pruebas en el puerto 8000 que laravel por default toma ese puerto
-	> php artisan serve
+	> **php artisan serve**
 
 ## Instrucciones proyecto AbarrotesAngular
 
 1. instalar Node.js si aun no lo tienes instalado
 
 2. instalar Angular con el siguiente comando
-	npm install -g @angular/cli
+	> **npm install -g @angular/cli**
 	
 3. Descargar el proyecto en Angular
 
 4. Correr el siguiente comando para descargar las dependencias del proyecto.
-	npm install
+	> **npm install**
 	
 5. Iniciar el servidor
-	ng serve --open
+	> **ng serve --open**
