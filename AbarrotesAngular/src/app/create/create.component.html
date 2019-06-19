@@ -1,11 +1,10 @@
   <div class="alert alert-info" role="alert">
     <div class="card">
-      <h5 class="card-header">Crear producto
+      <h5 class="card-header">{{editing? 'Editar producto': 'Crear producto'}}
           <a class="float-right" style="display: inline-block;" routerLink="/home" title="Regresar">Regresar</a>
       </h5>
     </div>
   </div>
-
 
 <div>
   <div class="form-row">
@@ -30,7 +29,7 @@
     <div class="form-group col-md-3">
       <label for="presentacion">Presentación</label>
       <select id="presentacion" [(ngModel)]="producto.presentacion_id" class="form-control">
-        <option value="" disabled>Elegir...</option>
+        <option value="" disabled [value]="producto.presentacion_id">Elegir...</option>
         <option *ngFor="let presentacion of hack(presentaciones)" [value]="presentacion.id">
           {{presentacion.presentacion}}
         </option>
@@ -39,12 +38,12 @@
     <div class="form-group col-md-3">
       <label for="iUmedida">Unidad de medida</label>
       <select id="iUmedida" [(ngModel)]="producto.unidadMedida_id" class="form-control">
-        <option value="" disabled>Elegir...</option>
+        <option value="" disabled [value]="producto.unidadMedida_id">Elegir...</option>
         <option *ngFor="let uMedida of hack(unidadesMedida)" [value]="uMedida.id">
           {{uMedida.unidadMedida}}
         </option>
       </select>
     </div>
   </div>
-  <button (click)="guardarProducto()" class="btn btn-primary">Guardar</button>
+  <button (click)="guardarProducto()" class="btn btn-primary">{{editing? 'Actualizar': 'Guardar'}}</button>
 </div>

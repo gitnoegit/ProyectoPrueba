@@ -15,9 +15,9 @@ export class CreateComponent implements OnInit {
 	producto: Producto = {
 		producto:null,
 		presentacion:null,
-		cantidad:0,
+		cantidad:null,
 		unidadMedida:null,
-		precio:0,
+		precio:null,
 		presentacion_id:0,
 		unidadMedida_id:0
 	};

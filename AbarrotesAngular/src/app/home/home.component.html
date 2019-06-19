@@ -7,26 +7,41 @@
     </div>
   </div>
 
+  <div class="form-row">
+    <div class="form-group col-md-12">
+        <input type="text" class="form-control" name="filterProducto" placeholder="Buscar..." [(ngModel)] = "filterProducto">
+    </div>
+  </div>
+
   <table class="table">
     <thead>
       <tr>
+        <th scope="col">#</th>
         <th scope="col">Producto</th>
         <th scope="col">Presentación</th>
         <th scope="col">Cantidad</th>
         <th scope="col">Unidad de medida</th>
         <th scope="col">Precio</th>
-        <th scope="col">Operación</th>
+        <th scope="col">&nbsp;</th>
+        <th scope="col">&nbsp;</th>
       </tr>
     </thead>
+    <!-- filter:filterProducto -->
     <tbody>
-      <tr *ngFor="let producto of productos">
+      <tr *ngFor="let producto of (productos | filter:filterProducto) | paginate: { itemsPerPage: 7, currentPage: pageActual }; let i = index">
+        <th scope="row">{{i+1}}</th>
         <th>{{producto.producto}}</th>
         <td>{{producto.presentacion}}</td>
         <td>{{producto.cantidad}}</td>
         <td>{{producto.unidadMedida}}</td>
         <td>{{producto.precio}}</td>
-        <td><button type="button" class="btn btn-primary btn-sm" routerLink="/edit/{{producto.id}}">Ver/Editar</button>
-        &nbsp; <button type="button" class="btn btn-danger btn-sm" (click)="delete(producto.id)">Eliminar</button></td>
+        <td>
+          <button type="button" class="btn btn-primary btn-sm" routerLink="/edit/{{producto.id}}">Ver/Editar</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger btn-sm" (click)="delete(producto.id)">Eliminar</button>
+        </td>
       </tr>
     </tbody>
   </table>
+  <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>

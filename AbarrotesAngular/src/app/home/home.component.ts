@@ -11,6 +11,8 @@ import { Producto } from '../interfaces/producto';
 export class HomeComponent implements OnInit {
 
 	productos:Producto[];
+  pageActual: number = 1;
+  filterProducto = '';
 
   constructor(private productosService: ProductosService) { 
     this.getProductos();
