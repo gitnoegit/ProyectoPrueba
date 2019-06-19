@@ -7,8 +7,6 @@
 - Angular 8.0.1
 - Node.js v10.16.0
 
-**Para ejecutar el proyecto en Laravel**
-
 1. Descargar proyecto
 
 2. Si no tienes instalado php y mysql puedes instalar xampp
@@ -33,3 +31,16 @@
 	php artisan serve
 
 ## Instrucciones proyecto AbarrotesAngular
+
+1. instalar Node.js si aun no lo tienes instalado
+
+2. instalar Angular con el siguiente comando
+	npm install -g @angular/cli
+	
+3. Descargar el proyecto en Angular
+
+4. Correr el siguiente comando para descargar las dependencias del proyecto.
+	npm install
+	
+5. Iniciar el servidor
+	ng serve --open
