@@ -1,12 +1,12 @@
 
 ## Instrucciones
 
-- **Este proyecto utiliza.**
-- Laravel 5.8.
-- Angular 8.0.1.
-- Node.js v10.16.0.
+**Este proyecto utiliza.**
+- Laravel 5.8
+- Angular 8.0.1
+- Node.js v10.16.0
 
-Para ejecutar el proyecto en Laravel
+**Para ejecutar el proyecto en Laravel**
 
 1. Descargar proyecto
 
