@@ -18,17 +18,18 @@
 4. Ubicate en el directorio del proyecto laravel y ejecuta el siguiente comando para descargar todas las dependencias:
 	composer install
 
-5. Crear la base de datos para el proyecto con el nombre que desees puedes cambiar los valores del archivo .env
-	Yo utilicé el nombre tiendabarrotes para la base de datos y el usuario root sin password, para realizar las pruebas.
+5. Crear la base de datos para el proyecto con el nombre que desees. Yo utilicé el nombre tiendabarrotes para la base de datos y el 	    usuario root sin password, para realizar las pruebas
+
+6. Configura los valores del archivo .env toma una copia del archivo .env.example para configurarlo.
 
 6. Para crear las tablas ejecuta el comando de laravel
-	php artisan migrate 
+	> php artisan migrate 
 	
 7. Es necesario crear unos registros en ciertas tablas para que el proyecto funcione asi que ejecuta el comando 
-	php artisan db:seed
+	> php artisan db:seed
 
 8. Por último corre el servidor de laravel para pruebas en el puerto 8000 que laravel por default toma ese puerto
-	php artisan serve
+	> php artisan serve
 
 ## Instrucciones proyecto AbarrotesAngular
 
