@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../interfaces/producto';
-import { Presentacion } from '../interfaces/presentacion';
 import { UnidadMedida } from '../interfaces/unidad-medida';
 import { ProductosService } from '../services/productos.service';
 import { ActivatedRoute } from '@angular/router';
@@ -22,8 +21,7 @@ export class CreateComponent implements OnInit {
 		unidadMedida_id:0
 	};
 
-	presentaciones: any;
-	unidadesMedida: any;
+	unidadesMedida: UnidadMedida[];
 
 	id:any;
 	editing:boolean = false;
@@ -48,16 +46,8 @@ export class CreateComponent implements OnInit {
 		}else{
 			this.editing = false;
 		}
-
-		this.presentaciones = this.productosService.getPresentaciones().subscribe((data: Presentacion[]) => {
-	      this.presentaciones = data;
-	    }, (error) => {
-	      console.log(error);
-	      alert("Ocurrió un error");
-	    });
-
 		
-		this.unidadesMedida = this.productosService.getUnidadesMedida().subscribe((data: UnidadMedida[]) => {
+		this.productosService.getUnidadesMedida().subscribe((data: UnidadMedida[]) => {
 	      this.unidadesMedida = data;
 	    }, (error) => {
 	      console.log(error);
@@ -91,13 +81,5 @@ export class CreateComponent implements OnInit {
 				alert("Ocurrió un error");
 			});		
   		}
-
-
   	}
-
-  	//Crear una nueva matriz apartir de la matriz entrante
-  	hack(val) {
-  		return Array.from(val);
-	}
-
 }

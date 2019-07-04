@@ -29,10 +29,6 @@ export class ProductosService {
     return this.httpClient.delete(this.API_ENDPOINT + '/productos/' + id);
   }
 
-  getPresentaciones() {
-    return this.httpClient.get(this.API_ENDPOINT + '/presentaciones');
-  }
-
   getUnidadesMedida() {
     return this.httpClient.get(this.API_ENDPOINT + '/unidadMedidas');
   }

@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FilterPipe } from './pipes/filter.pipe';
+import { PresentacionComponent } from './presentacion/presentacion.component';
 
 const routes: Route[] = [
 {path: '', component: HomeComponent},
@@ -24,6 +25,7 @@ const routes: Route[] = [
     HomeComponent,
     CreateComponent,
     FilterPipe,
+    PresentacionComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,7 @@
+<label for="presentacion">Presentación</label>
+<select id="presentacion" [(ngModel)]="productoSelected.presentacion_id" class="form-control">
+	<option value="" disabled [value]="0">Elegir...</option>
+	<option *ngFor="let presentacion of presentaciones" [value]="presentacion.id">
+	  {{presentacion.presentacion}}
+	</option>
+</select>
